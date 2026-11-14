@@ -56,3 +56,12 @@ jobs:
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: Everesto-Inc/loop/stages/push-image@d288ef304e4f10102727004981f3855ba9fcccf1 # v1.0.0
         with: { image: '${{ env.IMAGE }}', tag: '${{ steps.image.outputs.tag }}', token: '${{ secrets.GITHUB_TOKEN }}' }
+
+      - name: Deploy dev (ArgoCD)
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: Everesto-Inc/loop/stages/deploy-argocd@d288ef304e4f10102727004981f3855ba9fcccf1 # v1.0.0
+        with:
+          deploy-key: '${{ secrets.GITOPS_DEPLOY_KEY }}'
+          gitops-repo: Everesto-Inc/python-backend-gitops
+          path: apps/dev
+          tag: '${{ steps.image.outputs.tag }}'
