@@ -43,6 +43,10 @@ jobs:
       - name: Code security (Semgrep)
         uses: Everesto-Inc/loop/stages/semgrep@d288ef304e4f10102727004981f3855ba9fcccf1 # v1.0.0
 
+      - name: Quality gate (SonarQube)
+        uses: Everesto-Inc/loop/stages/sonarqube@d288ef304e4f10102727004981f3855ba9fcccf1 # v1.0.0
+        with: { token: '${{ secrets.SONAR_TOKEN }}' }
+
       - name: Build + scan image (Trivy)
         id: image
         uses: Everesto-Inc/loop/stages/build-image@d288ef304e4f10102727004981f3855ba9fcccf1 # v1.0.0
