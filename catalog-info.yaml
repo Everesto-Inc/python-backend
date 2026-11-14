@@ -28,6 +28,7 @@ metadata:
   annotations:
     github.com/project-slug: Everesto-Inc/python-backend-gitops
     argocd/app-name: python-backend-dev
+    backstage.io/techdocs-ref: url:https://github.com/Everesto-Inc/python-backend-gitops/tree/main
 spec:
   type: gitops
   owner: orchid
