@@ -19,3 +19,17 @@ spec:
   lifecycle: experimental
   owner: orchid
   system: orchid
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: python-backend-gitops
+  description: CD of python-backend — ArgoCD python-backend-dev (manual sync), prod via Promote
+  annotations:
+    github.com/project-slug: Everesto-Inc/python-backend-gitops
+    argocd/app-name: python-backend-dev
+spec:
+  type: gitops
+  owner: orchid
+  system: orchid
+  dependsOn: [component:default/python-backend]
