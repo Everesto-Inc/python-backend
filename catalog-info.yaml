@@ -12,7 +12,6 @@ metadata:
     everesto.live/gitleaks: "on"
     everesto.live/semgrep: "on"
     everesto.live/trivy: "on"
-    sonarqube.org/project-key: python-backend
     everesto.live/dependabot: "on"
 spec:
   type: service
