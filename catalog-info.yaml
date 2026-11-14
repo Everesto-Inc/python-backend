@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: python-backend
+  description: Application python-backend of project orchid
+  annotations:
+    github.com/project-slug: Everesto-Inc/python-backend
+    backstage.io/techdocs-ref: dir:.
+    everesto.live/ci-workflow: ci.yml
+    everesto.live/image: ghcr.io/everesto-inc/python-backend
+    everesto.live/loop: v1.0.0
+    everesto.live/gitleaks: "on"
+    everesto.live/semgrep: "on"
+    everesto.live/trivy: "on"
+    sonarqube.org/project-key: python-backend
+    everesto.live/dependabot: "on"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: orchid
+  system: orchid
