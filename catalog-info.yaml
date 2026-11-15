@@ -8,6 +8,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     everesto.live/ci-workflow: ci.yml
     everesto.live/image: ghcr.io/everesto-inc/python-backend
+    backstage.io/kubernetes-label-selector: app=python-backend   # Kubernetes tab: pods in dev + prod
     sonarqube.org/project-key: python-backend
     everesto.live/loop: v1.0.0
     everesto.live/gitleaks: "on"
