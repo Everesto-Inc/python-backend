@@ -28,6 +28,7 @@ metadata:
   annotations:
     github.com/project-slug: Everesto-Inc/python-backend-gitops
     argocd/app-name: dev-python-backend
+    everesto.live/namespace: python
     everesto.live/url-dev: https://python-backend.dev.everesto.live
     backstage.io/techdocs-ref: url:https://github.com/Everesto-Inc/python-backend-gitops/tree/main
 spec:
