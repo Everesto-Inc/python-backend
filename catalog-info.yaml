@@ -24,10 +24,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
   name: python-backend-gitops
-  description: CD of python-backend — ArgoCD python-backend-dev (manual sync), prod via Promote
+  description: CD of python-backend — ArgoCD dev-python-backend (manual sync), prod via Promote
   annotations:
     github.com/project-slug: Everesto-Inc/python-backend-gitops
-    argocd/app-name: python-backend-dev
+    argocd/app-name: dev-python-backend
     everesto.live/url-dev: https://python-backend.dev.everesto.live
     backstage.io/techdocs-ref: url:https://github.com/Everesto-Inc/python-backend-gitops/tree/main
 spec:
