@@ -1,5 +1,5 @@
 # Multi-arch base; CI builds linux/arm64 for the A1 nodes.
-FROM python:3.12-slim
+FROM python:3.15-slim
 # Pull Debian security fixes released since the base image was built (Trivy blocks fixable HIGH/CRITICAL).
 RUN apt-get update && apt-get upgrade -y --no-install-recommends && rm -rf /var/lib/apt/lists/*
 WORKDIR /srv
